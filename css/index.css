@@ -20,6 +20,7 @@ header {
     justify-content: center;
     display: flex;
     height: 287px;
+    margin: 15px;
 }
 
 footer {
