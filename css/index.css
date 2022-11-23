@@ -41,16 +41,32 @@ footer p {
     text-decoration: line-through;
     margin: 0 8px 0 0;
 }
+
 @media (max-width: 768px) {
-    .img-fluid {
-        height: 70%;
+    .card-text {
+        font-size: 12px;
     }
-    .col-md-4 {
+    .img-fluid {
+        width: 119px;
+        
+    }
+    /* .col-md-4 {
         width: 170px;
-        height: 385px;
+        height: 385px; */
     }
     .col {
         justify-content: center;
+
+    }
+    .sale{
+        height: 195px;
+        margin: 0%;
+        margin-top: 15px;
+        display: inline;
+    }
+    .card-body {
+        display: block;
+        
     }
 }
 hr {
