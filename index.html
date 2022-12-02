@@ -63,24 +63,37 @@
 
     <main>
         <section class="sale w-70 row-cols-1 container">
-            <div id="carouselExampleSlidesOnly" class="carousel slide col" data-bs-ride="carousel">
+            <div id="carouselExampleIndicators" class="carousel slide carousel-dark col" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  </div>
                 <div class="carousel-inner">
-                    <div class="carousel-item active" data-bs-interval="1000">
+                    <div class="carousel-item active" data-bs-interval="false">
                         <img src="assets/карусель/_0000s_0003_тут реклама распродажи.jpg" class="d-block w-100"
                             alt="...">
                     </div>
-                    <div class="carousel-item" data-bs-interval="1000">
+                    <div class="carousel-item" data-bs-interval="false">
                         <img src="assets/карусель/_0000s_0002_тут тоже.jpg" class="d-block w-100" alt="...">
                     </div>
-                    <div class="carousel-item" data-bs-interval="1000">
+                    <div class="carousel-item" data-bs-interval="false">
                         <img src="assets/карусель/_0000s_0001_тебе все еще интересно что на следующем слайде_.jpg"
                             class="d-block w-100" alt="...">
                     </div>
-                    <div class="carousel-item" data-bs-interval="1000">
+                    <div class="carousel-item" data-bs-interval="false">
                         <img src="assets/карусель/_0000s_0000_а ничего не будет, мне лень что-то делать....jpg"
                             class="d-block w-100" alt="...">
                     </div>
                 </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
             </div>
         </section>
 
