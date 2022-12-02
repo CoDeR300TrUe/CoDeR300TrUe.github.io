@@ -17,6 +17,54 @@ a {
     text-decoration: none;
 }
 
+.footer {
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    text-align: center;
+    background-color: rgb(189, 189, 189);
+    margin-top: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*тут описанны svg*/
 /*адреса*/
