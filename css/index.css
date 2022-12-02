@@ -1,79 +1,73 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
-
-* {
-    font-family: 'Comfortaa', cursive;
-}
-
-header {
-    background-color: #ffe4c4;
-    padding: 2em;
-}
-
-.nav-link {
-    color: #8e7f6d;
-    font-size: 1.2em;
-}   
-
-.sale {
-    height: 150px;
-    justify-content: center;
-    display: flex;
-    height: 287px;
-    margin: 15px;
-}
-
-footer {
-    background-color: #ffe4c4;
-    padding: 2em;
-    font-style: italic;
-    text-align: center;
-}
-
-footer p {
-    margin: 0;
-}
-.col {
-    display: flex;
-    margin: 15px 0 15px 0;
-}
-.saleprice {
-    text-decoration: line-through;
-    margin: 0 8px 0 0;
-}
-
 @media (max-width: 768px) {
-    .card-text {
-        font-size: 12px;
+    .pc {
+        display: none;
     }
-    .img-fluid {
-        width: 119px;
-        
-    }
-    /* .col-md-4 {
-        width: 170px;
-        height: 385px; */
-    
-    .col {
-        justify-content: center;
+}
 
-    }
-    .sale{
-        height: 195px;
-        margin: 15px;
-        display: inline;
-    }
-    .card-body {
-        display: block;
-        
-    }
+
+.link-cust {
+    font-size: 10px;
 }
-hr {
-    margin: 0;
+
+
+/*тут описанны svg*/
+/*адреса*/
+.gps {
+    fill: none;
 }
-.dropdown-item:active {
-    color: #0d6efd;
+
+.gps,
+.gps-2 {
+    stroke: #666;
+    stroke-miterlimit: 10;
+    stroke-width: 3px;
 }
-.col .card {
-    width: 18rem;
+
+.gps-2 {
+    fill: #fff;
+}
+
+
+
+/*каталог*/
+.catalog-1 {
+    fill: #fff;
+}
+
+.catalog-2 {
+    fill: #666;
+}
+
+
+/*корзина*/
+
+.basket-1 {
+    fill: #fff;
+}
+
+.basket-1,
+.basket-2 {
+    stroke: #666;
+    stroke-miterlimit: 10;
+    stroke-width: 3px;
+}
+
+.basket-2 {
+    fill: none;
+}
+
+/*дом*/
+.home-1 {
+    fill: none;
+    stroke: #666;
+    stroke-miterlimit: 10;
+    stroke-width: 3px;
+}
+
+/*профиль*/
+.profile-1 {
+    fill: none;
+    stroke: #666;
+    stroke-miterlimit: 10;
+    stroke-width: 3px;
 }
