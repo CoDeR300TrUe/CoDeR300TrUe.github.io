@@ -25,30 +25,110 @@
                 <div class="collapse navbar-collapse" id="collapsibleNavId">
                     <ul class="navbar-nav me-auto mt-2 mt-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#" aria-current="page">Home <span
+                            <a class="nav-link active" href="#" aria-current="page">Главная<span
                                     class="visually-hidden">(current)</span></a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
-                        </li>
+                        
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                                aria-haspopup="true" aria-expanded="false">Каталог</a>
                             <div class="dropdown-menu" aria-labelledby="dropdownId">
                                 <a class="dropdown-item" href="#">Action 1</a>
                                 <a class="dropdown-item" href="#">Action 2</a>
                             </div>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Магазины</a>
+                        </li>
                     </ul>
-                    <a href="login.html"><img src="assets/prof-m.png" alt="Профиль" width="60"></a>
+
+
+                    <!-- Default dropstart button -->
+                    <div class="btn-group dropstart">
+                        <a class="" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="assets/SVG/профиль с обводк.svg" width="50" alt="">
+                        </a>
+                        <ul class="dropdown-menu">
+                            <!-- Dropdown menu links -->
+                            <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#login-modal" href="#">Войти</a>
+                            <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#login-modal" href="#">Зарегистрироваться</a>
+                            <a class="dropdown-item" href="#">Корзина</a>
+
+                            
+                            
+  
+                            
+                        </ul>
+
+
+
+                        <!-- Modal -->
+                            <div class="modal fade" id="login-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Зарегистрируйся на сайте!</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form action="">
+                                                
+                                                <div class="row g-3 mb-4">
+                                                    <div class="col-12">
+                                            
+                                                        <label for="name" class="form-label">Имя и фамилия</label>
+                                                        <input type="text" class="form-control" id="name" placeholder="Иван Иванов">
+                                            
+                                                    </div>
+                                                    <div class="col-12">
+                                                        
+                                                            <label for="date-birth" class="form-label">Дата рождения</label>
+                                                            <input type="date" class="form-control" id="date-birth" placeholder="">
+                                            
+                                                    </div>
+                                                    <div class="col-12">
+                                                        
+                                                            <label for="email" class="form-label">Почта</label>
+                                                            <input type="email" class="form-control" id="email" placeholder="example@example.com">
+                                            
+                                                    </div>
+                                                    <div class="col-12">
+                                                        
+                                                            <label for="password" class="form-label">Пароль</label>
+                                                            <input type="password" class="form-control" id="password" placeholder="Password">
+                                                    
+                                            
+                                                    </div>
+                                                    
+                                                </div>
+                                                <footer class="row g-5 mb-4">
+                                                    
+                                                        <div class="col-md-9">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                                                <label class="form-check-label" for="flexCheckChecked">
+                                                                    Подписаться на рассылку
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class=" col-md-3"><button type="submit" class="btn btn-primary">Войти</button></div>
+                                                    
+                                                </footer>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
                 </div>
             </div>
         </nav>
         <nav class="navbar navbar-expand-sm navbar-light bg-light d-lg-none fixed-bottom">
             <!--d-md-none-->
             <div class="container">
-                <div class="row row-cols-5 w-100 text-center">
-                    <div class="col"><a href=""><svg width="30" id="Слой_5" data-name="Слой 5"
+                <div class="row row-cols-5 w-100 ">
+                    <div class="col text-center"><a href="index.html"><svg width="30" id="Слой_5" data-name="Слой 5"
                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
                                 <path class="home-1"
                                     d="M8.83,64s-1.67-27.5,0-32S25.5,4.16,32,4.83,53.71,27.5,54.11,32s0,32,0,32H8.83Z" />
@@ -56,7 +136,7 @@
                             </svg>
                             <p class="link-cust">Главная</p>
                         </a></div>
-                    <div class="col"><a href=""><svg width="30" id="Слой_2" data-name="Слой 2"
+                    <div class="col text-center"><a href=""><svg width="30" id="Слой_2" data-name="Слой 2"
                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
                                 <defs>
                                     <style>
@@ -70,7 +150,7 @@
                             <p class="link-cust">Контакты</p>
                         </a>
                     </div>
-                    <div class="col"><a href=""><svg width="30" id="Слой_1" data-name="Слой 1"
+                    <div class="col text-center"><a href=""><svg width="30" id="Слой_1" data-name="Слой 1"
                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
                                 <defs>
                                     <style></style>
@@ -98,7 +178,7 @@
                             </svg>
                             <p class="link-cust">Каталог</p>
                         </a></div>
-                    <div class="col"><a href=""><svg width="30" id="Слой_3" data-name="Слой 3"
+                    <div class="col text-center"><a href=""><svg width="30" id="Слой_3" data-name="Слой 3"
                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
                                 <defs>
                                     <style></style>
@@ -112,7 +192,7 @@
                             </svg>
                             <p class="link-cust">Корзина</p>
                         </a></div>
-                    <div class="col"><a href=""><svg width="30" id="Слой_6" data-name="Слой 6" xmlns="http://www.w3.org/2000/svg"
+                    <div class="col text-center"><a href="login.html"><svg width="30" id="Слой_6" data-name="Слой 6" xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 64 64">
                                 <defs>
                                     <style>
@@ -127,7 +207,6 @@
         </nav>
 
     </header>
-
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
