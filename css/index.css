@@ -4,7 +4,10 @@
     }
 }
 
-
+#collapsibleNavId {
+    display: flex;
+    justify-content: center;
+}
 .link-cust {
     font-size: 10px;
     color: black;
