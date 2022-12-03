@@ -62,8 +62,24 @@
     </header>
 
     <main class="container-fluid">
+        <div class="d-lg-none">
+            <p >
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#qwertyuiop" aria-expanded="false" aria-controls="collapseWidthExample">
+              Переключить ширину сворачиваемого
+            </button>
+          </p>
+          <div style="min-height: 120px;">
+            <div class="collapse collapse-horizontal" id="collapseWidthExample">
+              <div class="card card-body" style="width: 300px;">
+                Это некий заполнитель для горизонтального сворачивания. По умолчанию он скрыт и отображается при срабатывании.
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="flex">
-            <div class="flex-item pc sidebar">
+            
+            
+            <div class="flex-item  sidebar collapse collapse-horizontal" id="qwertyuiop" style="width: 100%;">
                 <h2>Фильтры</h2>
                 <form action="">
                     <div class="">
