@@ -2,7 +2,7 @@
     .pc {
         display: none;
     }
-    
+
 }
 
 #collapsibleNavId {
@@ -30,20 +30,44 @@ a {
 }
 
 
+.f-f {
+    display: inline-block;
+    width: 80px;
+
+}
+
+.marg {
+    margin-left: 20px;
+
+}
+
+.d-ib {
+    display: inline-block;
+    width: 200px;
+}
+
+.btn-cust {
+    background-color: rgb(134, 134, 134);
+}
+.btn-cust:hover {
+    background-color: rgb(134, 134, 134);
+}
+.btn-cust:active {
+    background-color: rgb(134, 134, 134);
+}
 
 
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none; /*Yeah, yeah everybody write about it*/ 
+}
 
-
-
-
-
-
-
-
-
-
-
-
+input[type='number'],
+input[type="number"]:hover,
+input[type="number"]:focus {
+    appearance: none;
+    -moz-appearance: textfield;
+}
 
 
 
