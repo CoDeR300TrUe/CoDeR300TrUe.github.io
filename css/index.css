@@ -26,7 +26,7 @@ a {
     height: 150px;
     text-align: center;
     background-color: rgb(189, 189, 189);
-    margin-top: 50px;
+    
 }
 
 
@@ -37,7 +37,7 @@ a {
 }
 
 .marg {
-    margin-left: 20px;
+    margin-left: 15px;
 
 }
 
@@ -68,23 +68,48 @@ input[type="number"]:focus {
     appearance: none;
     -moz-appearance: textfield;
 }
+.form-check-reverse {
+    display: inline-block;
+    text-align: left;
+}
+
+h6 {
+    font-style: bold;
+    font-size: 18px;
+}
 
 
 
+.colors {
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+}
 
+.border-checked:checked + label{
+    outline: 2px rgb(79, 79, 219) solid;
+    outline-offset: 1px;
+}
 
+.sidebar {
+    background-color: rgb(238, 237, 207);
+    border-radius: 10px;
+    height: 100%;
+    padding: 30px;
+    margin: 20px;
+    flex-grow: 1;
+}
+.main{
+    width: 70%;
+    background-color: rgb(211, 45, 45);
+    flex-grow: 5;
+}
 
-
-
-
-
-
-
-
-
-
-
-
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
 /*тут описанны svg*/
 /*адреса*/
 .gps {

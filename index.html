@@ -62,8 +62,8 @@
     </header>
 
     <main class="container-fluid">
-        <div class="row row-cols-lg-4">
-            <div class="col-lg-3 col-xxl-2 pc ">
+        <div class="flex">
+            <div class="flex-item pc sidebar">
                 <h2>Фильтры</h2>
                 <form action="">
                     <div class="">
@@ -109,9 +109,9 @@
                     </div>
                     
                     <h5 class="filt">Тип</h5>
-                    <h5 class="filt">Цена</h5>
+                    
                     <div class="cost">
-                       
+                    <h5 class="filt">Цена</h5>   
                     <label class="marg " for=".inputRange">Минимальная цена:</label><br>                   
                     <input class="marg inputRange form-range d-ib" type="range" min="100" max="100000" value="100" />
                     
@@ -124,7 +124,35 @@
                     </p>
                     
                     </div>
-                    
+                    <div class="form-check form-switch form-check-reverse">
+                        <label class="form-check-label" for="flexSwitchCheckChecked"><h6>Высокий рейтинг</h6></label>
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"><br>
+                        <label class="form-check-label" for="flexSwitchCheckChecked"><h6>Доставка из России</h6></label>
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"><br>
+                        <label class="form-check-label" for="flexSwitchCheckChecked"><h6>Товары со скидкой</h6></label>
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"><br>
+                    </div>
+                        <h5>Цвет:</h5>
+                        <div class="form-check">
+                            
+                            <input type="checkbox" class="btn-check border-checked" id="blue" autocomplete="off">
+                            <label class="btn btn-primary colors" for="blue"></label>
+
+                            <input type="checkbox" class="btn-check border-checked" id="red" autocomplete="off">
+                            <label class="btn btn-danger colors" for="red"></label>
+
+                            <input type="checkbox" class="btn-check border-checked" id="yellow" autocomplete="off">
+                            <label class="btn btn-warning colors" for="yellow"></label>
+
+                            <input type="checkbox" class="btn-check border-checked" id="grey" autocomplete="off">
+                            <label class="btn btn-secondary colors" for="grey"></label>
+
+                            <input type="checkbox" class="btn-check border-checked" id="green" autocomplete="off">
+                            <label class="btn btn-success colors" for="green"></label>
+
+                            <input type="checkbox" class="btn-check border-checked" id="black" autocomplete="off">
+                            <label class="btn btn-dark colors" for="black"></label>
+                    </div>
                 </form>
                 <script>
                     var range = document.querySelector('.inputRange');
@@ -146,7 +174,8 @@
                     });
                 </script>
             </div>
-            <div class="col-lg-9 col-xxl-10">
+            
+            <div class="flex-item main">
                 <section class="sale w-70 row-cols-1 container">
                     <div id="carouselExampleIndicators" class="carousel slide carousel-dark col"
                         data-bs-ride="carousel">
