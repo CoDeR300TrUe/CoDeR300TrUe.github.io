@@ -101,8 +101,6 @@ h6 {
     flex-grow: 1;
 }
 .main{
-    width: 70%;
-    background-color: rgb(211, 45, 45);
     flex-grow: 5;
 }
 
