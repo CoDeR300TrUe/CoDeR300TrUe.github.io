@@ -1,3 +1,7 @@
+body {
+    
+}
+
 @media (max-width: 991px) {
     .pc {
         display: none;
@@ -44,17 +48,19 @@ a {
     display: inline-block;
     width: 200px;
 }
-
-.btn-cust {
-    background-color: rgb(134, 134, 134);
+.rw-fl {
+    align-items: center;
 }
-.btn-cust:hover {
+.btn-cust {
+    border-radius: 50px;
+}
+/* .btn-cust:hover {
     background-color: rgb(134, 134, 134);
 }
 .btn-cust:active {
     background-color: rgb(134, 134, 134);
 }
-
+ */
 
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
@@ -110,6 +116,22 @@ h6 {
     display: flex;
     justify-content: space-between;
 }
+
+.select-head {
+    display: inline-block;
+    border: 1px gray solid;
+    font-size: 15px;
+    padding-right: 15px;
+}
+
+
+.www{
+    max-width: 70%; 
+    max-height: 36px;
+    display:inline-block;
+}
+
+
 /*тут описанны svg*/
 /*адреса*/
 .gps {
