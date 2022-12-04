@@ -50,6 +50,10 @@ a {
 }
 .rw-fl {
     align-items: center;
+    
+}
+.col-cust {
+    flex-grow: 1;
 }
 .btn-cust {
     border-radius: 50px;
