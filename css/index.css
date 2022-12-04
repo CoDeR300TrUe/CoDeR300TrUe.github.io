@@ -2,7 +2,6 @@
     .pc {
         display: none;
     }
-
 }
 
 #collapsibleNavId {
@@ -101,6 +100,8 @@ h6 {
     flex-grow: 1;
     max-width: 310px;
 }
+
+
 .main{
     flex-grow: 5;
 }

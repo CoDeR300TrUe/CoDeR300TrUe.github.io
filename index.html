@@ -62,24 +62,151 @@
     </header>
 
     <main class="container-fluid">
-        <div class="d-lg-none">
-            <p >
-            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#qwertyuiop"  aria-expanded="true" aria-controls="qwertyuiop">
-              Переключить ширину сворачиваемого
-            </button>
-          </p>
-          <div style="min-height: 120px;">
-            <div class="collapse collapse-horizontal" id="collapseWidthExample">
-              <div class="card card-body" style="width: 300px;">
-                Это некий заполнитель для горизонтального сворачивания. По умолчанию он скрыт и отображается при срабатывании.
-              </div>
-            </div>
-          </div>
+        <div class="row" style="height: 50px; background-color:aqua;">
+            <div class="col-4 d-lg-none">
+                <!-- Кнопка-триггер модального окна -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#filter-mobile">
+                  Фильтры
+                </button>
+                
+                <!-- Модальное окно -->
+                <div class="modal fade " id="filter-mobile" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Заголовок модального окна</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                      </div>
+                      
+                        <div class="sidebar modal-body"   id="qwertyuiop" >
+                
+                            <form action="" class="">
+                                <h2>Фильтры</h2>
+                                <div class="">
+                                    <h5 class="filt">Сроки доставки</h5>
+                                
+                                    <div class="form-check marg">
+                                        <input class="form-check-input" type="radio" name="delivery" value="" id="min-30">
+                                        <label class="form-check-label" for="min-30">
+                                            30 минут
+                                        </label>
+                                    </div>
+                                    <div class="form-check marg">
+                                        <input class="form-check-input" type="radio" name="delivery" value="" id="h-2">
+                                        <label class="form-check-label" for="h-2">
+                                            2 часа
+                                        </label>
+                                    </div>
+                                    <div class="form-check marg">
+                                        <input class="form-check-input" type="radio" name="delivery" value="" id="day">
+                                        <label class="form-check-label" for="day">
+                                            1 день
+                                        </label>
+                                    </div>
+                                    <div class="form-check marg">
+                                        <input class="form-check-input" type="radio" name="delivery" value="" id="day-7">
+                                        <label class="form-check-label" for="day-7">
+                                            Неделя
+                                        </label>
+                                    </div>
+                                    <div class="form-check marg">
+                                        <input class="form-check-input" type="radio" name="delivery" value="" id="month">
+                                        <label class="form-check-label" for="month">
+                                            Мясяц
+                                        </label>
+                                    </div>
+                                    <div class="form-check marg">
+                                        <input class="form-check-input" type="radio" name="delivery" value="" id="never">
+                                        <label class="form-check-label" for="never">
+                                            Неважно
+                                        </label>
+                                    </div>
+                        
+                                </div>
+                                
+                                <h5 class="filt">Тип</h5>
+                                
+                                <div class="cost">
+                                <h5 class="filt">Цена</h5>   
+                                <label class="marg " for=".inputRange">Минимальная цена:</label><br>                   
+                                <input class="marg inputRange form-range d-ib" type="range" min="100" max="100000" value="100" />
+                                
+                                <br><label class="marg " for=".inputRange1">Максимальная цена:</label><br>
+                                <input class="marg inputRange1 form-range d-ib" type="range" min="100" max="100000" value="100000"/>
+                                <p class="marg">показать товары с ценой</p>
+                                <p class="marg">
+                                    <input class="inputNumber form-control f-f" id="num1" min="100" max="100000" type="number"value="100" /> - 
+                                    <input class="inputNumber form-control f-f" id="num2" min="100" max="100000" type="number"value="100000" />
+                                </p>
+                                
+                                </div>
+                                <div class="form-check form-switch form-check-reverse">
+                                    <label class="form-check-label" for="flexSwitchCheckChecked"><h6>Высокий рейтинг</h6></label>
+                                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"><br>
+                                    <label class="form-check-label" for="flexSwitchCheckChecked"><h6>Доставка из России</h6></label>
+                                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"><br>
+                                    <label class="form-check-label" for="flexSwitchCheckChecked"><h6>Товары со скидкой</h6></label>
+                                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"><br>
+                                </div>
+                                    <h5>Цвет:</h5>
+                                    <div class="form-check">
+                                        
+                                        <input type="checkbox" class="btn-check border-checked" id="blue" autocomplete="off">
+                                        <label class="btn btn-primary colors" for="blue"></label>
+                        
+                                        <input type="checkbox" class="btn-check border-checked" id="red" autocomplete="off">
+                                        <label class="btn btn-danger colors" for="red"></label>
+                        
+                                        <input type="checkbox" class="btn-check border-checked" id="yellow" autocomplete="off">
+                                        <label class="btn btn-warning colors" for="yellow"></label>
+                        
+                                        <input type="checkbox" class="btn-check border-checked" id="grey" autocomplete="off">
+                                        <label class="btn btn-secondary colors" for="grey"></label>
+                        
+                                        <input type="checkbox" class="btn-check border-checked" id="green" autocomplete="off">
+                                        <label class="btn btn-success colors" for="green"></label>
+                        
+                                        <input type="checkbox" class="btn-check border-checked" id="black" autocomplete="off">
+                                        <label class="btn btn-dark colors" for="black"></label>
+                                </div>
+                            </form>
+                            <script>
+                                var range = document.querySelector('.inputRange');
+                                var field = document.getElementById('num1');
+                                var range1 = document.querySelector('.inputRange1');
+                                var field1 = document.getElementById('num2');
+                        
+                                range.addEventListener('input', function (e) {
+                                    field.value = e.target.value;
+                                });
+                                field.addEventListener('input', function (e) {
+                                    range.value = e.target.value;
+                                });
+                                range1.addEventListener('input', function (e) {
+                                    field1.value = e.target.value;
+                                });
+                                field1.addEventListener('input', function (e) {
+                                    range1.value = e.target.value;
+                                });
+                            </script>
+                        </div>
+                        
+                        
+                      
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                        <button type="button" class="btn btn-primary">Сохранить изменения</button>
+                      </div>
+                    </div>
+                  </div>
+                </div></div>
+            <div class="col-4"></div>
+            <div class="col-4"></div>
         </div>
         <div class="flex">
             
             
-            <div class="flex-item  sidebar pc"  style="width: 100%;">
+            <div class="flex-item  sidebar pc"  >
                 
                 <form action="" class="">
                     <h2>Фильтры</h2>
@@ -191,118 +318,7 @@
                     });
                 </script>
             </div>
-            <div class="flex-item  sidebar collapse"   id="qwertyuiop" style="width: 100%;">
-                
-                <form action="" class="">
-                    <h2>Фильтры</h2>
-                    <div class="">
-                        <h5 class="filt">Сроки доставки</h5>
-                    
-                        <div class="form-check marg">
-                            <input class="form-check-input" type="radio" name="delivery" value="" id="min-30">
-                            <label class="form-check-label" for="min-30">
-                                30 минут
-                            </label>
-                        </div>
-                        <div class="form-check marg">
-                            <input class="form-check-input" type="radio" name="delivery" value="" id="h-2">
-                            <label class="form-check-label" for="h-2">
-                                2 часа
-                            </label>
-                        </div>
-                        <div class="form-check marg">
-                            <input class="form-check-input" type="radio" name="delivery" value="" id="day">
-                            <label class="form-check-label" for="day">
-                                1 день
-                            </label>
-                        </div>
-                        <div class="form-check marg">
-                            <input class="form-check-input" type="radio" name="delivery" value="" id="day-7">
-                            <label class="form-check-label" for="day-7">
-                                Неделя
-                            </label>
-                        </div>
-                        <div class="form-check marg">
-                            <input class="form-check-input" type="radio" name="delivery" value="" id="month">
-                            <label class="form-check-label" for="month">
-                                Мясяц
-                            </label>
-                        </div>
-                        <div class="form-check marg">
-                            <input class="form-check-input" type="radio" name="delivery" value="" id="never">
-                            <label class="form-check-label" for="never">
-                                Неважно
-                            </label>
-                        </div>
-
-                    </div>
-                    
-                    <h5 class="filt">Тип</h5>
-                    
-                    <div class="cost">
-                    <h5 class="filt">Цена</h5>   
-                    <label class="marg " for=".inputRange">Минимальная цена:</label><br>                   
-                    <input class="marg inputRange form-range d-ib" type="range" min="100" max="100000" value="100" />
-                    
-                    <br><label class="marg " for=".inputRange1">Максимальная цена:</label><br>
-                    <input class="marg inputRange1 form-range d-ib" type="range" min="100" max="100000" value="100000"/>
-                    <p class="marg">показать товары с ценой</p>
-                    <p class="marg">
-                        <input class="inputNumber form-control f-f" id="num1" min="100" max="100000" type="number"value="100" /> - 
-                        <input class="inputNumber form-control f-f" id="num2" min="100" max="100000" type="number"value="100000" />
-                    </p>
-                    
-                    </div>
-                    <div class="form-check form-switch form-check-reverse">
-                        <label class="form-check-label" for="flexSwitchCheckChecked"><h6>Высокий рейтинг</h6></label>
-                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"><br>
-                        <label class="form-check-label" for="flexSwitchCheckChecked"><h6>Доставка из России</h6></label>
-                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"><br>
-                        <label class="form-check-label" for="flexSwitchCheckChecked"><h6>Товары со скидкой</h6></label>
-                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"><br>
-                    </div>
-                        <h5>Цвет:</h5>
-                        <div class="form-check">
-                            
-                            <input type="checkbox" class="btn-check border-checked" id="blue" autocomplete="off">
-                            <label class="btn btn-primary colors" for="blue"></label>
-
-                            <input type="checkbox" class="btn-check border-checked" id="red" autocomplete="off">
-                            <label class="btn btn-danger colors" for="red"></label>
-
-                            <input type="checkbox" class="btn-check border-checked" id="yellow" autocomplete="off">
-                            <label class="btn btn-warning colors" for="yellow"></label>
-
-                            <input type="checkbox" class="btn-check border-checked" id="grey" autocomplete="off">
-                            <label class="btn btn-secondary colors" for="grey"></label>
-
-                            <input type="checkbox" class="btn-check border-checked" id="green" autocomplete="off">
-                            <label class="btn btn-success colors" for="green"></label>
-
-                            <input type="checkbox" class="btn-check border-checked" id="black" autocomplete="off">
-                            <label class="btn btn-dark colors" for="black"></label>
-                    </div>
-                </form>
-                <script>
-                    var range = document.querySelector('.inputRange');
-                    var field = document.getElementById('num1');
-                    var range1 = document.querySelector('.inputRange1');
-                    var field1 = document.getElementById('num2');
-    
-                    range.addEventListener('input', function (e) {
-                        field.value = e.target.value;
-                    });
-                    field.addEventListener('input', function (e) {
-                        range.value = e.target.value;
-                    });
-                    range1.addEventListener('input', function (e) {
-                        field1.value = e.target.value;
-                    });
-                    field1.addEventListener('input', function (e) {
-                        range1.value = e.target.value;
-                    });
-                </script>
-            </div>
+            
             <div class="flex-item main">
                 <section class="sale w-70 row-cols-1 container">
                     <div id="carouselExampleIndicators" class="carousel slide carousel-dark col"
