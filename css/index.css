@@ -99,10 +99,10 @@ h6 {
     padding: 30px;
     margin: 20px;
     flex-grow: 1;
+    max-width: 310px;
 }
 .main{
-    width: 70%;
-    background-color: rgb(211, 45, 45);
+    
     flex-grow: 5;
 }
 
