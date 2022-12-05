@@ -1,0 +1,16 @@
+.btn-cust {
+    max-width: 200px;
+    border: 2px black solid;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 3px 10px;
+    display: inline-block;
+}
+
+.btn-cust:hover {
+    background-color: rgb(237, 243, 146);
+}
+
+.marg {
+    margin: 10px;
+}
