@@ -59,3 +59,24 @@
     stroke-miterlimit: 10;
     stroke-width: 3px;
 }
+
+/*сравнить*/
+.compare-1 {
+    fill: none;
+    border-radius: 10px;
+}
+
+.compare-1,
+.compare-2 {
+    stroke: #666;
+    stroke-miterlimit: 10;
+}
+
+.compare-2 {
+    fill: #999;
+}
+
+/*нравится*/
+.like {
+    fill: red;
+}

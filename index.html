@@ -58,162 +58,29 @@
 
     </header>
 
-    <main class="container-fluid">
-        <div class="row rw-fl" style="height: 50px; background-color:rgb(226, 226, 226); text-align: center;">
-            <div class="col-cust col">
-                <!-- Кнопка-триггер модального окна -->
-                <button type="button " class=" btn btn-info btn-cust d-lg-none" data-bs-toggle="modal" data-bs-target="#filter-mobile">
-                  Фильтры
-                </button>
-                
-                <!-- Модальное окно -->
-                <div class="modal fade " id="filter-mobile" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                  <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Фильтры</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
-                      </div>
-                      
-                        <div class=" modal-body"   id="qwertyuiop" >
-                
-                            <form action="" class="">
-                                
-                                <div class="d-inline-block">
-                                    <h5 class="filt">Сроки доставки</h5>
-                                
-                                    <div class="form-check marg">
-                                        <input class="form-check-input" type="radio" name="delivery" value="" id="min-30">
-                                        <label class="form-check-label" for="min-30">
-                                            30 минут
-                                        </label>
-                                    </div>
-                                    <div class="form-check marg">
-                                        <input class="form-check-input" type="radio" name="delivery" value="" id="h-2">
-                                        <label class="form-check-label" for="h-2">
-                                            2 часа
-                                        </label>
-                                    </div>
-                                    <div class="form-check marg">
-                                        <input class="form-check-input" type="radio" name="delivery" value="" id="day">
-                                        <label class="form-check-label" for="day">
-                                            1 день
-                                        </label>
-                                    </div>
-                                    <div class="form-check marg">
-                                        <input class="form-check-input" type="radio" name="delivery" value="" id="day-7">
-                                        <label class="form-check-label" for="day-7">
-                                            Неделя
-                                        </label>
-                                    </div>
-                                    <div class="form-check marg">
-                                        <input class="form-check-input" type="radio" name="delivery" value="" id="month">
-                                        <label class="form-check-label" for="month">
-                                            Мясяц
-                                        </label>
-                                    </div>
-                                    <div class="form-check marg">
-                                        <input class="form-check-input" type="radio" name="delivery" value="" id="never" checked>
-                                        <label class="form-check-label" for="never">
-                                            Неважно
-                                        </label>
-                                    </div>
-                        
-                                </div>
-                                
-                                <h5 class="filt">Тип</h5>
-                                
-                                <div class="cost">
-                                <h5 class="filt">Цена</h5>   
-                                <label class="marg " for=".inputRange">Минимальная цена:</label><br>                   
-                                <input class="marg inputRange form-range d-ib" type="range" min="100" max="100000" value="100" />
-                                
-                                <br><label class="marg " for=".inputRange1">Максимальная цена:</label><br>
-                                <input class="marg inputRange1 form-range d-ib" type="range" min="100" max="100000" value="100000"/>
-                                <p class="marg">показать товары с ценой</p>
-                                <p class="marg">
-                                    <input class="inputNumber form-control f-f" id="num1" min="100" max="100000" type="number"value="100" /> - 
-                                    <input class="inputNumber form-control f-f" id="num2" min="100" max="100000" type="number"value="100000" />
-                                </p>
-                                
-                                </div>
-                                <div class="form-check form-switch form-check-reverse">
-                                    <label class="form-check-label" for="flexSwitchCheckChecked"><h6>Высокий рейтинг</h6></label>
-                                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"><br>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked"><h6>Доставка из России</h6></label>
-                                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"><br>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked"><h6>Товары со скидкой</h6></label>
-                                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"><br>
-                                </div>
-                                    <h5>Цвет:</h5>
-                                    <div class="form-check">
-                                        
-                                        <input type="checkbox" class="btn-check border-checked" id="blue" autocomplete="off">
-                                        <label class="btn btn-primary colors" for="blue"></label>
-                        
-                                        <input type="checkbox" class="btn-check border-checked" id="red" autocomplete="off">
-                                        <label class="btn btn-danger colors" for="red"></label>
-                        
-                                        <input type="checkbox" class="btn-check border-checked" id="yellow" autocomplete="off">
-                                        <label class="btn btn-warning colors" for="yellow"></label>
-                        
-                                        <input type="checkbox" class="btn-check border-checked" id="grey" autocomplete="off">
-                                        <label class="btn btn-secondary colors" for="grey"></label>
-                        
-                                        <input type="checkbox" class="btn-check border-checked" id="green" autocomplete="off">
-                                        <label class="btn btn-success colors" for="green"></label>
-                        
-                                        <input type="checkbox" class="btn-check border-checked" id="black" autocomplete="off">
-                                        <label class="btn btn-dark colors" for="black"></label>
-                                </div>
-                            
-                            <script>
-                                var range = document.querySelector('.inputRange');
-                                var field = document.getElementById('num1');
-                                var range1 = document.querySelector('.inputRange1');
-                                var field1 = document.getElementById('num2');
-                        
-                                range.addEventListener('input', function (e) {
-                                    field.value = e.target.value;
-                                });
-                                field.addEventListener('input', function (e) {
-                                    range.value = e.target.value;
-                                });
-                                range1.addEventListener('input', function (e) {
-                                    field1.value = e.target.value;
-                                });
-                                field1.addEventListener('input', function (e) {
-                                    range1.value = e.target.value;
-                                });
-                            </script>
-                        </div>
-                        
-                        
-                      
-                      <div class="modal-footer">
-                        <button type="submit" class="btn btn-primary">Применить</button>
-                      </div>
-                    </form>
-                    </div>
-                  </div>
-                </div></div>
-            <div class="col-cust col">
-                <select class=" form-select form-select-sm select-head btn btn-info btn-cust" aria-label=".form-select-sm пример">
-                    <option selected>Сортировка</option>
-                    <option value="1">Сначала недорогие</option>
-                    <option value="2">Сначала популярные</option>
-                    <option value="3">Сначала дорогие</option>
-                  </select>
+    <main class="container-fluid row">
+        <div class="col-12">
+            <div class="search">
+                <form action="" class="search"><input type="text" placeholder="Найдется всё!"><button type="submit">Найти</button>
+                </form>
+                <a href="" class="link-cust scale pc"><svg width="30" id="Слой_9" data-name="Слой 9" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+                        <path class="like"
+                            d="M58,35.13,32.28,63l-.4-.44-.15.15L6,34.86A19.84,19.84,0,0,1,6,8.45a16.31,16.31,0,0,1,24.34,0l1.76,1.93,1.51-1.64A16.24,16.24,0,0,1,58,8.74,19.77,19.77,0,0,1,58,35.13Z" />
+                    </svg><p>Избранное</p></a>
+                <a href="" class="link-cust scale pc"><svg width="30" id="Слой_10" data-name="Слой 10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+                        <rect class="compare-1" x="0.5" y="0.5" width="63" height="63" rx="8.01"/>
+                        <rect class="compare-2" x="7.5" y="7.5" width="10" height="63" />
+                        <rect class="compare-2" x="27.5" y="29.5" width="10" height="50" />
+                        <rect class="compare-2" x="46.5" y="18.5" width="10" height="50" />
+                    </svg><p >Сравнить</p></a>
             </div>
-            <div class="col-cust col">
-                <select class="form-select form-select-sm select-head btn btn-info btn-cust" aria-label=".form-select-sm пример">
-                    <option selected>Категории</option>
-                    <option value="1">категория 1</option>
-                    <option value="2">категория 2</option>
-                    <option value="3">категория 3</option>
-                  </select></div>
-            <!-- <div class="col-6 pc"><form action=""><input type="text" class="form-control www"><button type="submit" class="btn btn-success">Поиск</button></form></div>-->
+            
+            
         </div>
+
+
+
+
         <div class="flex">
             
             
@@ -221,6 +88,27 @@
                 
                 <form action="" class="">
                     <h2>Фильтры</h2>
+                    <div class="category">
+                        <h5>Категория</h5>
+                        <div class="form-check marg">
+                            <input class="form-check-input" type="radio" name="category" value="" id="category-1">
+                            <label class="form-check-label" for="category-1">
+                                Категория 1
+                            </label>
+                        </div>
+                        <div class="form-check marg">
+                            <input class="form-check-input" type="radio" name="category" value="" id="category-2" checked>
+                            <label class="form-check-label" for="category-2">
+                                Категория 2
+                            </label>
+                        </div>
+                        <div class="form-check marg">
+                            <input class="form-check-input" type="radio" name="category" value="" id="category-3">
+                            <label class="form-check-label" for="category-3">
+                                Категория 3
+                            </label>
+                        </div>
+                    </div>
                     <div class="">
                         <h5 class="filt">Сроки доставки</h5>
                     
@@ -330,8 +218,8 @@
                 </script>
             </div>
             
-            <div class="flex-item main">
-                <section class="sale w-70 row-cols-1 container">
+            <div class="flex-item main ">
+                <section class="sale w-70 row-cols-1 container pc">
                     <div id="carouselExampleIndicators" class="carousel slide carousel-dark col"
                         data-bs-ride="carousel">
                         <div class="carousel-indicators">
@@ -373,75 +261,980 @@
 
 
 
-                <div class="container">
-
-                    <div class="row justify-content-center row-cols-1 row-cols-md-2 row-cols-lg-4">
-                        <div class="col">
-                            <div class="card">
-                                <img src="https://101tea.ru/upload/ammina.optimizer/jpg-webp/q70/upload/resize_cache/iblock/cf9/529_529_118ade429667f31b699080c7cadfe31a8/cf9d236d75b44acf090a1639926c8480.webp"
-                                    class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Чай черный Таежный с пуэром</h5>
-                                    <p class="card-text">чай пуэр и классический черный GFOP.
+                <div class="container-fluid">
+                    <h2 class="mt-4">Популярное</h2>
+                    <div class="popular">
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Название товара</h5>
+                                <p class="card-text">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae quasi natus totam sint ratione deleniti.
                                     </p>
-                                    <div class="row row-cols-lg-2 row-cols-2 row-cols-md-2 row-cols-xl-2">
-                                        <div class="col"><a href="#" class="btn btn-warning">В корзину</a></div>
-                                        <div class="col">549руб</div>
-                                    </div>
-                                </div>
+                                <form class="row mt-4">
+                                    <div class="col-6"><div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                                            >
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Сравнить
+                                        </label>
+                                    </div></div>
+                                    <div class="col-6"><a href="" class="btn btn-success">В корзину</a></div>
+                                </form>
+                                
                             </div>
                         </div>
-                        <div class="col">
-                            <div class="card">
-                                <span class="position-absolute top-0 start--1  badge rounded-pill bg-danger">
-                                    Скидка!
-                                </span>
-                                <img src="https://101tea.ru/upload/ammina.optimizer/jpg-webp/q70/upload/resize_cache/iblock/e09/529_529_118ade429667f31b699080c7cadfe31a8/e09f8e5ec528cb3020d0547e49bcfeac.webp"
-                                    class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Кофе зеленый Эфиопия Мокко</h5>
-                                    <p class="card-text">Этот сорт кофе предназначается для обжарки в домашних условиях.
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Название товара</h5>
+                                <p class="card-text">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae quasi natus totam sint ratione deleniti.
                                     </p>
-                                    <div class="row row-cols-lg-2 row-cols-2 row-cols-md-2 row-cols-xl-2">
-                                        <div class="col"><a href="#" class="btn btn-warning">В корзину</a></div>
-                                        <div class="col"> <span class="saleprice">549</span> 400руб</div>
-                                    </div>
-                                </div>
+                                <form class="row mt-4">
+                                    <div class="col-6"><div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                                            >
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Сравнить
+                                        </label>
+                                    </div></div>
+                                    <div class="col-6"><a href="" class="btn btn-success">В корзину</a></div>
+                                </form>
+                                
                             </div>
                         </div>
-                        <div class="col">
-                            <div class="card">
-                                <img src="https://101tea.ru/upload/ammina.optimizer/jpg-webp/q70/upload/resize_cache/iblock/e10/529_529_118ade429667f31b699080c7cadfe31a8/2ia854x267e9eg3g5kunn7n3zup652nm.webp"
-                                    class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Турецкий яблочный чай</h5>
-                                    <p class="card-text">Чай с яблоком - просто кладезь витаминов во главе с витамином
-                                        C. Не
-                                        содержит кофеина. </p>
-                                    <div class="row row-cols-lg-2 row-cols-2 row-cols-md-2 row-cols-xl-2">
-                                        <div class="col"><a href="#" class="btn btn-warning">В корзину</a></div>
-                                        <div class="col">549руб</div>
-                                    </div>
-                                </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Название товара</h5>
+                                <p class="card-text">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae quasi natus totam sint ratione deleniti.
+                                    </p>
+                                <form class="row mt-4">
+                                    <div class="col-6"><div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                                            >
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Сравнить
+                                        </label>
+                                    </div></div>
+                                    <div class="col-6"><a href="" class="btn btn-success">В корзину</a></div>
+                                </form>
+                                
                             </div>
                         </div>
-                        <div class="col">
-                            <div class="card">
-                                <img src="https://101tea.ru/upload/ammina.optimizer/jpg-webp/q70/upload/resize_cache/iblock/e10/529_529_118ade429667f31b699080c7cadfe31a8/2ia854x267e9eg3g5kunn7n3zup652nm.webp"
-                                    class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Турецкий яблочный чай</h5>
-                                    <p class="card-text">Чай с яблоком - просто кладезь витаминов во главе с витамином
-                                        C. Не
-                                        содержит кофеина. </p>
-                                    <div class="row row-cols-lg-2 row-cols-2 row-cols-md-2 row-cols-xl-2">
-                                        <div class="col"><a href="#" class="btn btn-warning">В корзину</a></div>
-                                        <div class="col">549руб</div>
-                                    </div>
-                                </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Название товара</h5>
+                                <p class="card-text">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae quasi natus totam sint ratione deleniti.
+                                    </p>
+                                <form class="row mt-4">
+                                    <div class="col-6"><div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                                            >
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Сравнить
+                                        </label>
+                                    </div></div>
+                                    <div class="col-6"><a href="" class="btn btn-success">В корзину</a></div>
+                                </form>
+                                
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Название товара</h5>
+                                <p class="card-text">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae quasi natus totam sint ratione deleniti.
+                                    </p>
+                                <form class="row mt-4">
+                                    <div class="col-6"><div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                                            >
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Сравнить
+                                        </label>
+                                    </div></div>
+                                    <div class="col-6"><a href="" class="btn btn-success">В корзину</a></div>
+                                </form>
+                                
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Название товара</h5>
+                                <p class="card-text">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae quasi natus totam sint ratione deleniti.
+                                    </p>
+                                <form class="row mt-4">
+                                    <div class="col-6"><div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                                            >
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Сравнить
+                                        </label>
+                                    </div></div>
+                                    <div class="col-6"><a href="" class="btn btn-success">В корзину</a></div>
+                                </form>
+                                
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Название товара</h5>
+                                <p class="card-text">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae quasi natus totam sint ratione deleniti.
+                                    </p>
+                                <form class="row mt-4">
+                                    <div class="col-6"><div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                                            >
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Сравнить
+                                        </label>
+                                    </div></div>
+                                    <div class="col-6"><a href="" class="btn btn-success">В корзину</a></div>
+                                </form>
+                                
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Название товара</h5>
+                                <p class="card-text">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae quasi natus totam sint ratione deleniti.
+                                    </p>
+                                <form class="row mt-4">
+                                    <div class="col-6"><div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                                            >
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Сравнить
+                                        </label>
+                                    </div></div>
+                                    <div class="col-6"><a href="" class="btn btn-success">В корзину</a></div>
+                                </form>
+                                
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Название товара</h5>
+                                <p class="card-text">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae quasi natus totam sint ratione deleniti.
+                                    </p>
+                                <form class="row mt-4">
+                                    <div class="col-6"><div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                                            >
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Сравнить
+                                        </label>
+                                    </div></div>
+                                    <div class="col-6"><a href="" class="btn btn-success">В корзину</a></div>
+                                </form>
+                                
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Название товара</h5>
+                                <p class="card-text">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae quasi natus totam sint ratione deleniti.
+                                    </p>
+                                <form class="row mt-4">
+                                    <div class="col-6"><div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                                            >
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Сравнить
+                                        </label>
+                                    </div></div>
+                                    <div class="col-6"><a href="" class="btn btn-success">В корзину</a></div>
+                                </form>
+                                
                             </div>
                         </div>
                     </div>
+                    <h2 class="mt-4">Сезонные товары</h2>
+                    <div class="seasons">
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Название товара</h5>
+                                <p class="card-text">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae quasi natus totam sint ratione deleniti.
+                                    </p>
+                                <form class="row mt-4">
+                                    <div class="col-6"><div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                                            >
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Сравнить
+                                        </label>
+                                    </div></div>
+                                    <div class="col-6"><a href="" class="btn btn-success">В корзину</a></div>
+                                </form>
+                                
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Название товара</h5>
+                                <p class="card-text">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae quasi natus totam sint ratione deleniti.
+                                    </p>
+                                <form class="row mt-4">
+                                    <div class="col-6"><div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                                            >
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Сравнить
+                                        </label>
+                                    </div></div>
+                                    <div class="col-6"><a href="" class="btn btn-success">В корзину</a></div>
+                                </form>
+                                
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Название товара</h5>
+                                <p class="card-text">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae quasi natus totam sint ratione deleniti.
+                                    </p>
+                                <form class="row mt-4">
+                                    <div class="col-6"><div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                                            >
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Сравнить
+                                        </label>
+                                    </div></div>
+                                    <div class="col-6"><a href="" class="btn btn-success">В корзину</a></div>
+                                </form>
+                                
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Название товара</h5>
+                                <p class="card-text">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae quasi natus totam sint ratione deleniti.
+                                    </p>
+                                <form class="row mt-4">
+                                    <div class="col-6"><div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                                            >
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Сравнить
+                                        </label>
+                                    </div></div>
+                                    <div class="col-6"><a href="" class="btn btn-success">В корзину</a></div>
+                                </form>
+                                
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Название товара</h5>
+                                <p class="card-text">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae quasi natus totam sint ratione deleniti.
+                                    </p>
+                                <form class="row mt-4">
+                                    <div class="col-6"><div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                                            >
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Сравнить
+                                        </label>
+                                    </div></div>
+                                    <div class="col-6"><a href="" class="btn btn-success">В корзину</a></div>
+                                </form>
+                                
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Название товара</h5>
+                                <p class="card-text">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae quasi natus totam sint ratione deleniti.
+                                    </p>
+                                <form class="row mt-4">
+                                    <div class="col-6"><div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                                            >
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Сравнить
+                                        </label>
+                                    </div></div>
+                                    <div class="col-6"><a href="" class="btn btn-success">В корзину</a></div>
+                                </form>
+                                
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Название товара</h5>
+                                <p class="card-text">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae quasi natus totam sint ratione deleniti.
+                                    </p>
+                                <form class="row mt-4">
+                                    <div class="col-6"><div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                                            >
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Сравнить
+                                        </label>
+                                    </div></div>
+                                    <div class="col-6"><a href="" class="btn btn-success">В корзину</a></div>
+                                </form>
+                                
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Название товара</h5>
+                                <p class="card-text">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae quasi natus totam sint ratione deleniti.
+                                    </p>
+                                <form class="row mt-4">
+                                    <div class="col-6"><div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                                            >
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Сравнить
+                                        </label>
+                                    </div></div>
+                                    <div class="col-6"><a href="" class="btn btn-success">В корзину</a></div>
+                                </form>
+                                
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Название товара</h5>
+                                <p class="card-text">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae quasi natus totam sint ratione deleniti.
+                                    </p>
+                                <form class="row mt-4">
+                                    <div class="col-6"><div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                                            >
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Сравнить
+                                        </label>
+                                    </div></div>
+                                    <div class="col-6"><a href="" class="btn btn-success">В корзину</a></div>
+                                </form>
+                                
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Название товара</h5>
+                                <p class="card-text">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae quasi natus totam sint ratione deleniti.
+                                    </p>
+                                <form class="row mt-4">
+                                    <div class="col-6"><div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                                            >
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Сравнить
+                                        </label>
+                                    </div></div>
+                                    <div class="col-6"><a href="" class="btn btn-success">В корзину</a></div>
+                                </form>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="mt-4">Новинки</h2>
+                    <div class="new">
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Название товара</h5>
+                                <p class="card-text">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae quasi natus totam sint ratione deleniti.
+                                    </p>
+                                <form class="row mt-4">
+                                    <div class="col-6"><div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                                            >
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Сравнить
+                                        </label>
+                                    </div></div>
+                                    <div class="col-6"><a href="" class="btn btn-success">В корзину</a></div>
+                                </form>
+                                
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Название товара</h5>
+                                <p class="card-text">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae quasi natus totam sint ratione deleniti.
+                                    </p>
+                                <form class="row mt-4">
+                                    <div class="col-6"><div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                                            >
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Сравнить
+                                        </label>
+                                    </div></div>
+                                    <div class="col-6"><a href="" class="btn btn-success">В корзину</a></div>
+                                </form>
+                                
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Название товара</h5>
+                                <p class="card-text">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae quasi natus totam sint ratione deleniti.
+                                    </p>
+                                <form class="row mt-4">
+                                    <div class="col-6"><div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                                            >
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Сравнить
+                                        </label>
+                                    </div></div>
+                                    <div class="col-6"><a href="" class="btn btn-success">В корзину</a></div>
+                                </form>
+                                
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Название товара</h5>
+                                <p class="card-text">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae quasi natus totam sint ratione deleniti.
+                                    </p>
+                                <form class="row mt-4">
+                                    <div class="col-6"><div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                                            >
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Сравнить
+                                        </label>
+                                    </div></div>
+                                    <div class="col-6"><a href="" class="btn btn-success">В корзину</a></div>
+                                </form>
+                                
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Название товара</h5>
+                                <p class="card-text">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae quasi natus totam sint ratione deleniti.
+                                    </p>
+                                <form class="row mt-4">
+                                    <div class="col-6"><div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                                            >
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Сравнить
+                                        </label>
+                                    </div></div>
+                                    <div class="col-6"><a href="" class="btn btn-success">В корзину</a></div>
+                                </form>
+                                
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Название товара</h5>
+                                <p class="card-text">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae quasi natus totam sint ratione deleniti.
+                                    </p>
+                                <form class="row mt-4">
+                                    <div class="col-6"><div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                                            >
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Сравнить
+                                        </label>
+                                    </div></div>
+                                    <div class="col-6"><a href="" class="btn btn-success">В корзину</a></div>
+                                </form>
+                                
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Название товара</h5>
+                                <p class="card-text">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae quasi natus totam sint ratione deleniti.
+                                    </p>
+                                <form class="row mt-4">
+                                    <div class="col-6"><div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                                            >
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Сравнить
+                                        </label>
+                                    </div></div>
+                                    <div class="col-6"><a href="" class="btn btn-success">В корзину</a></div>
+                                </form>
+                                
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Название товара</h5>
+                                <p class="card-text">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae quasi natus totam sint ratione deleniti.
+                                    </p>
+                                <form class="row mt-4">
+                                    <div class="col-6"><div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                                            >
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Сравнить
+                                        </label>
+                                    </div></div>
+                                    <div class="col-6"><a href="" class="btn btn-success">В корзину</a></div>
+                                </form>
+                                
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Название товара</h5>
+                                <p class="card-text">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae quasi natus totam sint ratione deleniti.
+                                    </p>
+                                <form class="row mt-4">
+                                    <div class="col-6"><div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                                            >
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Сравнить
+                                        </label>
+                                    </div></div>
+                                    <div class="col-6"><a href="" class="btn btn-success">В корзину</a></div>
+                                </form>
+                                
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Название товара</h5>
+                                <p class="card-text">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae quasi natus totam sint ratione deleniti.
+                                    </p>
+                                <form class="row mt-4">
+                                    <div class="col-6"><div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                                            >
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Сравнить
+                                        </label>
+                                    </div></div>
+                                    <div class="col-6"><a href="" class="btn btn-success">В корзину</a></div>
+                                </form>
+                                
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Название товара</h5>
+                                <p class="card-text">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae quasi natus totam sint ratione deleniti.
+                                    </p>
+                                <form class="row mt-4">
+                                    <div class="col-6"><div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                                            >
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Сравнить
+                                        </label>
+                                    </div></div>
+                                    <div class="col-6"><a href="" class="btn btn-success">В корзину</a></div>
+                                </form>
+                                
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Название товара</h5>
+                                <p class="card-text">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae quasi natus totam sint ratione deleniti.
+                                    </p>
+                                <form class="row mt-4">
+                                    <div class="col-6"><div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                                            >
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Сравнить
+                                        </label>
+                                    </div></div>
+                                    <div class="col-6"><a href="" class="btn btn-success">В корзину</a></div>
+                                </form>
+                                
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Название товара</h5>
+                                <p class="card-text">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae quasi natus totam sint ratione deleniti.
+                                    </p>
+                                <form class="row mt-4">
+                                    <div class="col-6"><div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                                            >
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Сравнить
+                                        </label>
+                                    </div></div>
+                                    <div class="col-6"><a href="" class="btn btn-success">В корзину</a></div>
+                                </form>
+                                
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Название товара</h5>
+                                <p class="card-text">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae quasi natus totam sint ratione deleniti.
+                                    </p>
+                                <form class="row mt-4">
+                                    <div class="col-6"><div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                                            >
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Сравнить
+                                        </label>
+                                    </div></div>
+                                    <div class="col-6"><a href="" class="btn btn-success">В корзину</a></div>
+                                </form>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="mt-4">Скидки</h2>
+                    <div class="sale-prod">
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Название товара</h5>
+                                <p class="card-text">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae quasi natus totam sint ratione deleniti.
+                                    </p>
+                                <form class="row mt-4">
+                                    <div class="col-6"><div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                                            >
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Сравнить
+                                        </label>
+                                    </div></div>
+                                    <div class="col-6"><a href="" class="btn btn-success">В корзину</a></div>
+                                </form>
+                                
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Название товара</h5>
+                                <p class="card-text">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae quasi natus totam sint ratione deleniti.
+                                    </p>
+                                <form class="row mt-4">
+                                    <div class="col-6"><div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                                            >
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Сравнить
+                                        </label>
+                                    </div></div>
+                                    <div class="col-6"><a href="" class="btn btn-success">В корзину</a></div>
+                                </form>
+                                
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Название товара</h5>
+                                <p class="card-text">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae quasi natus totam sint ratione deleniti.
+                                    </p>
+                                <form class="row mt-4">
+                                    <div class="col-6"><div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                                            >
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Сравнить
+                                        </label>
+                                    </div></div>
+                                    <div class="col-6"><a href="" class="btn btn-success">В корзину</a></div>
+                                </form>
+                                
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Название товара</h5>
+                                <p class="card-text">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae quasi natus totam sint ratione deleniti.
+                                    </p>
+                                <form class="row mt-4">
+                                    <div class="col-6"><div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                                            >
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Сравнить
+                                        </label>
+                                    </div></div>
+                                    <div class="col-6"><a href="" class="btn btn-success">В корзину</a></div>
+                                </form>
+                                
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Название товара</h5>
+                                <p class="card-text">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae quasi natus totam sint ratione deleniti.
+                                    </p>
+                                <form class="row mt-4">
+                                    <div class="col-6"><div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                                            >
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Сравнить
+                                        </label>
+                                    </div></div>
+                                    <div class="col-6"><a href="" class="btn btn-success">В корзину</a></div>
+                                </form>
+                                
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Название товара</h5>
+                                <p class="card-text">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae quasi natus totam sint ratione deleniti.
+                                    </p>
+                                <form class="row mt-4">
+                                    <div class="col-6"><div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                                            >
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Сравнить
+                                        </label>
+                                    </div></div>
+                                    <div class="col-6"><a href="" class="btn btn-success">В корзину</a></div>
+                                </form>
+                                
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Название товара</h5>
+                                <p class="card-text">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae quasi natus totam sint ratione deleniti.
+                                    </p>
+                                <form class="row mt-4">
+                                    <div class="col-6"><div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                                            >
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Сравнить
+                                        </label>
+                                    </div></div>
+                                    <div class="col-6"><a href="" class="btn btn-success">В корзину</a></div>
+                                </form>
+                                
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Название товара</h5>
+                                <p class="card-text">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae quasi natus totam sint ratione deleniti.
+                                    </p>
+                                <form class="row mt-4">
+                                    <div class="col-6"><div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                                            >
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Сравнить
+                                        </label>
+                                    </div></div>
+                                    <div class="col-6"><a href="" class="btn btn-success">В корзину</a></div>
+                                </form>
+                                
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Название товара</h5>
+                                <p class="card-text">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae quasi natus totam sint ratione deleniti.
+                                    </p>
+                                <form class="row mt-4">
+                                    <div class="col-6"><div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                                            >
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Сравнить
+                                        </label>
+                                    </div></div>
+                                    <div class="col-6"><a href="" class="btn btn-success">В корзину</a></div>
+                                </form>
+                                
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Название товара</h5>
+                                <p class="card-text">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae quasi natus totam sint ratione deleniti.
+                                    </p>
+                                <form class="row mt-4">
+                                    <div class="col-6"><div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                                            >
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Сравнить
+                                        </label>
+                                    </div></div>
+                                    <div class="col-6"><a href="" class="btn btn-success">В корзину</a></div>
+                                </form>
+                                
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Название товара</h5>
+                                <p class="card-text">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae quasi natus totam sint ratione deleniti.
+                                    </p>
+                                <form class="row mt-4">
+                                    <div class="col-6"><div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                                            >
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Сравнить
+                                        </label>
+                                    </div></div>
+                                    <div class="col-6"><a href="" class="btn btn-success">В корзину</a></div>
+                                </form>
+                                
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Название товара</h5>
+                                <p class="card-text">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae quasi natus totam sint ratione deleniti.
+                                    </p>
+                                <form class="row mt-4">
+                                    <div class="col-6"><div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                                            >
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Сравнить
+                                        </label>
+                                    </div></div>
+                                    <div class="col-6"><a href="" class="btn btn-success">В корзину</a></div>
+                                </form>
+                                
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Название товара</h5>
+                                <p class="card-text">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae quasi natus totam sint ratione deleniti.
+                                    </p>
+                                <form class="row mt-4">
+                                    <div class="col-6"><div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                                            >
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Сравнить
+                                        </label>
+                                    </div></div>
+                                    <div class="col-6"><a href="" class="btn btn-success">В корзину</a></div>
+                                </form>
+                                
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Название товара</h5>
+                                <p class="card-text">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae quasi natus totam sint ratione deleniti.
+                                    </p>
+                                <form class="row mt-4">
+                                    <div class="col-6"><div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                                            >
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Сравнить
+                                        </label>
+                                    </div></div>
+                                    <div class="col-6"><a href="" class="btn btn-success">В корзину</a></div>
+                                </form>
+                                
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
             
