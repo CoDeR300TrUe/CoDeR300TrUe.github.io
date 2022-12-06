@@ -1,16 +1,79 @@
-.btn-cust {
-    max-width: 200px;
-    border: 2px black solid;
-    border-radius: 5px;
-    font-size: 20px;
-    padding: 3px 10px;
+body {
+    background-color: #fff;
+}
+.name-user {
     display: inline-block;
+    text-align: center;
+    
+
 }
 
-.btn-cust:hover {
-    background-color: rgb(237, 243, 146);
+
+.flex-cent {
+    display: flex;
+    align-items: center;
+}
+.flex-cent-wrap {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-.marg {
-    margin: 10px;
+
+.name{
+    margin-left: 20px;
+    font-size: 20px;
+
 }
+
+
+.info, .contact{
+    width: 30%;
+    border: 1px black solid;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 10px;
+
+}
+
+.setting, .market{
+    width: 20%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    border: 1px black solid;
+    padding:0 10px;
+    padding-bottom: 10px;
+}
+
+.btn {
+    margin: 2px;
+}
+.btn:hover{
+    transform: scale(1.05);
+    transition: all 0.5s;
+}
+.flex {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    
+
+}
+@media (max-width: 430px) {
+    .flex-no-1 {
+        display: inline-block;
+    }
+}
+@media (max-width: 991px) {
+    .info, .setting, .contact, .market {
+        display: block;
+        width: 100%;
+    }
+
+    .flex-no{
+        display: inline-block;
+
+    }
+
+}
+
